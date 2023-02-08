@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 150ms ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+.globel-header {
+    background-color: transparent;
+    z-index: 100;
+}
+
+.gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.gnb-list {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.gnb-list a {
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.gnb-list a:hover {
+    margin-right: 0;
+}
+
+.back {
+    background-image: url(./images/bg_afternoon.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.back {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-txt {
+    position: absolute;
+    top: 40%;
+    margin-left: 80px;
+}
+
+.back-txt-color {
+    color: gray;
+}
+
+.back-img {
+    background-image: url(./images/phone_afternoon.png);
+    width: 1000px;
+    height: 700px;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -100px;
+}
+
+.time {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+footer {
+    position: absolute;
+    bottom: 32px;
+    left: 64px;
+    width: calc(100% - 128px);
+    /* grid = flex */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+}
+
+input[type=radio]:checked + label {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+label {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.join-box {
+    position: absolute;
+    bottom: 30px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.four-box{
+    display: flex;
+    width: calc(100% -20px / 4);
+}
+
+.inputbox {
+    border: 1px solid rgba(0, 0, 0, .5);
+    background-color: #bbb5b5;
+}
+
+input[type=radio] {
+    display: none;
+}
