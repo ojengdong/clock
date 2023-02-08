@@ -23,10 +23,6 @@ li {
     list-style: none;
 }
 
-img {
-    display: none;
-}
-
 #wrapper {
     /* 뷰포드 기준으로 음직이므로 문서의 흐름을 벗어나서 화면 영역을 기준으로 정렬 */
     position: fixed;
@@ -110,7 +106,7 @@ section em {
     right: -300px;
     width: 1200px;
     height: 800px;
-    background-image: url(./images/phone_afternoon.png);
+    /* background-image: url(./images/phone_afternoon.png); */
     
 }
 
@@ -175,7 +171,7 @@ nav li.on a {
 }
 
 #wrapper.morning  #phone{
-    background-image: url(./images/bg_morning.jpg);
+    background-image: url(./images/phone_morning.png);
 }
 
 #wrapper.afternoon{
@@ -183,7 +179,7 @@ nav li.on a {
 }
 
 #wrapper.afternoon #phone{
-    background-image: url(./images/bg_afternoon.jpg);
+    background-image: url(./images/phone_afternoon.png);
 }
 
 #wrapper.evening{
@@ -191,7 +187,7 @@ nav li.on a {
 }
 
 #wrapper.evening #phone{
-    background-image: url(./images/bg_evening.jpg);
+    background-image: url(./images/phone_evening.png);
 }
 
 #wrapper.night{
@@ -199,5 +195,109 @@ nav li.on a {
 }
 
 #wrapper.night #phone{
-    background-image: url(./images/bg_night.jpg);
+    background-image: url(./images/phone_night.png);
+}
+
+/* night일 경우 로고 , 컬러 */
+#wrapper.night h1 {
+    background: url(./images/logo_w.png)no-repeat; 
+    background-size: contain;
+}
+
+#wrapper.night .gnb a {
+    color: #fff;
+}
+
+#wrapper.night .gnb li a::after {
+    border-color: #fff;
+}
+
+#wrapper.night strong {
+    color: #fff;
+}
+
+#wrapper.night p,
+#wrapper.night em {
+    color: #999;
+}
+
+#wrapper.night #phone p {
+    color: #fff;
+}
+
+#wrapper > img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    z-index: -1;
+    width: 600px;
+    animation-name: ani1;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#wrapper > img:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    opacity: .8;
+    z-index: -1;
+    /* name | duration | timing-function */
+    animation: ani2 100s linear infinite;
+}
+
+#phone p .cloud1 {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ani3 100s linear infinite;
+}
+
+#phone p .cloud2 {
+    width: 600px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    animation: ani4 100s linear infinite;
+}
+
+@keyframes ani1 {
+    /* from - to */
+    0% {
+        left: -100vw;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes ani2 {
+    /* from - to */
+    0% {
+        left: -100vw;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes ani3 {
+    0% {
+        left: -100vw;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes ani4 {
+    0% {
+        left: -100vw;
+    }
+    100% {
+        left: 100vw;
+    }
 }
