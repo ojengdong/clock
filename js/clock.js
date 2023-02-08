@@ -22,3 +22,20 @@ function init(){
 }
 
 init();
+
+$(".inputbox").click(function(e){
+    e.preventDefault();
+    $(".inputbox").removeClass('btn-primary');
+    $(".inputbox").removeAttr('checked');
+
+    $(this).addClass('btn-primary');
+    $(this).children('input[type=radio]').attr('checked', 'checked');
+    if($(this).children('input[type=radio]').val()==0){
+        $('.back').css({"background-image":"url(./img/bg_morning.jpg)"});
+        $('.back-img').css({"background-image":"url(./img/phone_morning.jpg)"});
+        $('.logo img').attr("src", "./img/logo_b.png");
+        $('.globel-header a').css("color","#000");
+        $('main').css("color","#000");
+        $('.gnb').removeClass("whiteline");
+    }
+});
